@@ -49,4 +49,4 @@ repository:
   # Numbers
   number:
     name: constant.numeric.integer.robots-txt
-    match: '\d'
+    match: '(?<=\s)\d+'
