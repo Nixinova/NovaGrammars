@@ -1,0 +1,8 @@
+# Adapted from https://docs.netlify.com/routing/redirects/redirect-options/
+
+# Redirect users in Australia or New Zealand to /anz.
+# There CANNOT be spaces in the last parameter: Country=x,y,z or Language=xx,yy
+/  /anz     302  Country=au,nz
+
+# Redirect users with American English language preference from /en to /en-us
+/en/*  /en-us/:splat  302!  Language=en-US
