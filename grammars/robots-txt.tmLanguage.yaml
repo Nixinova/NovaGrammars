@@ -38,7 +38,7 @@ repository:
   # URI
   uri:
     name: string.unquoted.uri.robots-txt
-    begin: '(?:[a-z]+:)\/'
+    begin: '(?:[a-z]+:)?\/'
     end: '$'
 
   # Text
@@ -49,4 +49,4 @@ repository:
   # Numbers
   number:
     name: constant.numeric.integer.robots-txt
-    match: '(?<=\s)\d+'
+    match: '\d+'
