@@ -1,5 +1,5 @@
-name: _redirects
-scopeName: text._redirects
+name: Redirect Rules
+scopeName: source.redirects
 fileTypes:
 - _redirects
 patterns:
@@ -18,16 +18,16 @@ repository:
 
   # Comment line
   comment:
-    name: comment.line.hash._redirects
+    name: comment.line.hash.redirects
     begin: '#'
     end: '$'
     beginCaptures:
       0:
-        name: punctuation.definition.comment._redirects
+        name: punctuation.definition.comment.redirects
 
   # URI
   uri:
-    name: string.unquoted.uri._redirects
+    name: string.unquoted.uri.redirects
     begin: '(?:[a-z]+:)?\/'
     end: '[\s$]'
     patterns:
@@ -36,42 +36,42 @@ repository:
 
   # Wildcard
   wildcard:
-    name: constant.character.wildcard._redirects
+    name: constant.character.wildcard.redirects
     match: '\*'
 
   # Splat
   splat:
-    name: variable.other.splat._redirects
+    name: variable.other.splat.redirects
     match: ':\w+'
 
   # Query
   query:
-    name: keyword.other.query-selector._redirects
+    name: keyword.other.query-selector.redirects
     match: '[^\s]+(?==)'
 
   # Redirect code
   number:
-    match: '(?<=\s)(\d+)(!)?(?=\s|$)'
+    match: '(\d+)(!)?'
     captures:
       1:
-        name: constant.numeric.integer._redirects
+        name: constant.numeric.integer.redirects
       2:
-        name: constant.character.force._redirects
+        name: constant.character.force.redirects
 
   # Geo/lang code
   code:
-    name: string.unquoted.code._redirects
+    name: string.unquoted.code.redirects
     match: '(?<==)[a-z]{2}(?:-[A-Z]{2})?(?=\s|$)'
 
   # Text
   text:
-    name: string.unquoted.text._redirects
+    name: string.unquoted.text.redirects
     match: '(?<==)[^\s]+'
 
   # Punctuation
   punct:
     patterns:
-    - name: punctuation.accessor._redirects
+    - name: punctuation.accessor.redirects
       match: ':|='
-    - name: punctuation.separator._redirects
+    - name: punctuation.separator.redirects
       match: ',(?!\s)'
