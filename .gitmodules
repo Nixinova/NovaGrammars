@@ -1,3 +1,3 @@
 [submodule "grammars/NovaSheets"]
 	path = grammars/NovaSheets
-	url = https://github.com/novasheets/vscode
+	url = https://github.com/NovaSheets/vscode
