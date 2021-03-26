@@ -21,7 +21,7 @@ repository:
     begin: '#'
     end: '$'
     beginCaptures:
-      0:
+      '0':
         name: punctuation.definition.comment.robots-txt
 
   # Directive
