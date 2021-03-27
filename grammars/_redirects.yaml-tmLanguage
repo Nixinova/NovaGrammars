@@ -22,7 +22,7 @@ repository:
     begin: '#'
     end: '$'
     beginCaptures:
-      0:
+      '0':
         name: punctuation.definition.comment.redirects
 
   # URI
@@ -53,9 +53,9 @@ repository:
   number:
     match: '(\d+)(!)?'
     captures:
-      1:
+      '1':
         name: constant.numeric.integer.redirects
-      2:
+      '2':
         name: constant.character.force.redirects
 
   # Geo/lang code
