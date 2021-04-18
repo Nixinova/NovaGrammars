@@ -1,0 +1,82 @@
+name: KeyValues
+scopeName: source.keyvalues
+fileTypes:
+  - gameinfo.txt
+patterns:
+  - include: '#main'
+
+repository:
+  main:
+    patterns:
+      - include: '#block'
+      - include: '#comment'
+      - include: '#string'
+      - include: '#number'
+
+  # Blocks
+  block:
+    name: meta.structure.block.keyvalues
+    begin: '{'
+    beginCaptures:
+      '0': { name: punctuation.definition.block.begin.keyvalues }
+    end: '}'
+    endCaptures:
+      '0': { name: punctuation.definition.block.end.keyvalues }
+    patterns:
+      - include: '#main'
+
+  # Comments
+  comment:
+    name: comment.line.slash.keyvalues
+    begin: '/'
+    end: '$'
+    beginCaptures:
+      '0': { name: punctuation.definition.comment.keyvalues }
+
+  # String variables
+  string_parts:
+    patterns:
+      # Includes
+      - name: entity.name.tag.include.keyvalues
+        match: '(?<!\w)(#)\w+'
+        captures:
+          '1': { name: punctuation.definition.include.keyvalues }
+
+      # Directory variables
+      - name: string.unquoted.file-path.keyvalues
+        match: '(\|)(\S+)(\|)'
+        captures:
+          '0': { name: constant.language.directory.keyvalues }
+          '1': { name: punctuation.definition.directory.begin.keyvalues }
+          '3': { name: punctuation.definition.directory.end.keyvalues }
+
+      # Escape sequences
+      - name: constant.character.escape.keyvalues
+        match: '\\[\\nt"]'
+
+  # Strings
+  string:
+    patterns:
+      - include: '#string_parts'
+
+      # Quoted
+      - name: string.quoted.double.keyvalues
+        begin: '"'
+        beginCaptures:
+          '0': { name: punctuation.definition.string.begin.keyvalues }
+        end: '"'
+        endCaptures:
+          '0': { name: punctuation.definition.string.end.keyvalues }
+        patterns:
+          - include: '#string_parts'
+
+      # Unquoted
+      - name: string.unquoted.keyvalues
+        match: '[^\s{}]+'
+        patterns:
+          - include: '#string_parts'
+
+  # Numbers
+  number:
+    name: constant.numeric.integer.keyvalues
+    match: '\b\d+\b$'
