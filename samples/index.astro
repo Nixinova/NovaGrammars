@@ -1,0 +1,34 @@
+---
+// Component imports
+import Test from '../components/Test.astro';
+
+// Component scripts:
+const title = 'My Astro Site';
+---
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{title}</title>
+	<link rel="icon" href="/favicon.ico">
+	<style>
+		header {
+			display: flex;
+			flex-direction: column;
+			max-width: min(100%, 68ch);
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<header>
+			<div>
+				<h1>Welcome to <a href="https://astro.build/">Astro</a></h1>
+			</div>
+		</header>
+
+		<!-- Test component -->
+		<Test />
+	</main>
+</body>
+</html>
