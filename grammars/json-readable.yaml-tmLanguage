@@ -1,0 +1,83 @@
+name: Readable JSON
+scopeName: source.json
+fileTypes:
+  - '.json'
+patterns:
+  - include: '#main'
+
+repository:
+  main:
+    patterns:
+      - include: '#object'
+      - include: '#key'
+      - include: '#array'
+      - include: '#string'
+      - include: '#number'
+      - include: '#boolean'
+      - include: '#null'
+      - include: '#delimiters'
+      - include: '#invalid'
+
+  # Objects
+  object:
+    name: meta.block.object.json
+    begin: '{'
+    end: '}'
+    captures:
+      '0': { name: punctuation.definition.block.object.json }
+    patterns:
+      - include: '#main'
+
+  # Array
+  array:
+    name: meta.block.array.json
+    begin: '['
+    end: ']'
+    captures:
+      '0': { name: punctuation.definition.block.array.json }
+    patterns:
+      - include: '#object'
+
+  # Key:value pairs
+  key:
+    name: variable.other.object.key.json
+    match: '(")([^"]*)(")\s*(?=:)'
+    captures:
+      '0': { name: punctuation.definition.key.start.json }
+      '2': { name: punctuation.definition.key.end.json }
+
+  # String
+  string:
+    name: string.quoted.json
+    match: '(")([^"]*)(")\s*(?!:)'
+    captures:
+      '0': { name: punctuation.definition.string.begin.json }
+      '2': { name: punctuation.definition.string.end.json }
+
+  # Numbers
+  number:
+    name: constant.numeric.json
+    match: '\d+(?:\.\d+)?'
+
+  # Boolean
+  boolean:
+    name: constant.language.boolean.json
+    match: 'true|false'
+
+  # Null
+  null:
+    name: constant.language.null.json
+    match: 'null'
+
+  # Delimiter
+  delimiters:
+    patterns:
+      - name: punctuation.separator.accessor.json
+        match: ':'
+      - name: punctuation.separator.comma.json
+        match: ','
+
+  # Other/invalid
+  invalid:
+    name: 'invalid.illegal.json'
+    match: '\S+'
