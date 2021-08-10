@@ -61,13 +61,13 @@ repository:
 
   # Boolean
   boolean:
-    name: constant.language.boolean.json
-    match: 'true|false'
+    name: constant.language.boolean.$1.json
+    match: '(?<=^|[,:\s\[])(true|false)(?=$|[,\s\]])'
 
   # Null
   null:
     name: constant.language.null.json
-    match: 'null'
+    match: '(?<=^|[,:\s\[])null(?=$|[,\s\]])'
 
   # Delimiter
   delimiters:
