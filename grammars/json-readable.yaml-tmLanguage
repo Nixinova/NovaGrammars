@@ -31,8 +31,8 @@ repository:
   # Array
   array:
     name: meta.block.array.json
-    begin: '['
-    end: ']'
+    begin: '\['
+    end: '\]'
     captures:
       '0': { name: punctuation.definition.block.array.json }
     patterns:
