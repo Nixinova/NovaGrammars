@@ -103,4 +103,4 @@ repository:
   # Other/invalid
   invalid:
     name: 'invalid.illegal.unexpected-character.json'
-    match: '\S+'
+    match: '\S[^}\]]*'
