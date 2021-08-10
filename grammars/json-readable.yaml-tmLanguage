@@ -77,7 +77,7 @@ repository:
   # Numbers
   number:
     name: constant.numeric.json
-    match: '\d+(?:\.\d+)?'
+    match: '-?\d+(?:\.\d+)?(?:[eE][-+]?[0-9]+)?'
 
   # Boolean
   boolean:
