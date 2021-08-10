@@ -23,8 +23,10 @@ repository:
     name: meta.block.object.json
     begin: '{'
     end: '}'
-    captures:
-      '0': { name: punctuation.definition.block.object.json }
+    beginCaptures:
+      '0': { name: punctuation.definition.block.object.begin.json }
+    endCaptures:
+      '0': { name: punctuation.definition.block.object.end.json }
     patterns:
       - include: '#main'
 
@@ -33,8 +35,10 @@ repository:
     name: meta.block.array.json
     begin: '\['
     end: '\]'
-    captures:
-      '0': { name: punctuation.definition.block.array.json }
+    beginCaptures:
+      '0': { name: punctuation.definition.block.array.begin.json }
+    endCaptures:
+      '0': { name: punctuation.definition.block.array.end.json }
     patterns:
       - include: '#object'
 
@@ -48,7 +52,7 @@ repository:
 
   # String
   string:
-    name: string.quoted.json
+    name: string.quoted.double.json
     match: '(")([^"]*)(")\s*(?!:)'
     captures:
       '0': { name: punctuation.definition.string.begin.json }
@@ -72,12 +76,12 @@ repository:
   # Delimiter
   delimiters:
     patterns:
-      - name: punctuation.separator.accessor.json
+      - name: punctuation.separator.key-value.colon.json
         match: ':'
       - name: punctuation.separator.comma.json
         match: ','
 
   # Other/invalid
   invalid:
-    name: 'invalid.illegal.json'
+    name: 'invalid.illegal.unexpected-character.json'
     match: '\S+'
