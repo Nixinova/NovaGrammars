@@ -76,8 +76,11 @@ repository:
 
   # Numbers
   number:
-    name: constant.numeric.json
-    match: '-?\d+(?:\.\d+)?(?:[eE][-+]?[0-9]+)?'
+    patterns:
+      - name: invalid.illegal.leading-zero.json
+        match: '-?0\d+(?:\.\d+)?(?:[eE][-+]?[0-9]+)?'
+      - name: constant.numeric.json
+        match: '-?\d+(?:\.\d+)?(?:[eE][-+]?[0-9]+)?'
 
   # Boolean
   boolean:
