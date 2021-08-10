@@ -58,7 +58,7 @@ repository:
 
   # Key:value pairs
   key:
-    name: variable.other.object.key.json
+    name: entity.name.tag.key.json
     match: '(")((?:[^\\"]|\\.)*+)(")\s*(?=:)'
     captures:
       '1': { name: punctuation.definition.key.start.json }
