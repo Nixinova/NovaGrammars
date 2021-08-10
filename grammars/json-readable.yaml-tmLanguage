@@ -40,7 +40,7 @@ repository:
     endCaptures:
       '0': { name: punctuation.definition.block.array.end.json }
     patterns:
-      - include: '#object'
+      - include: '#main'
 
   # Key:value pairs
   key:
