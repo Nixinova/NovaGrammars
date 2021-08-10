@@ -1,4 +1,4 @@
-name: Readable JSON
+name: JSON
 scopeName: source.json
 fileTypes:
   - '.json'
