@@ -42,20 +42,36 @@ repository:
     patterns:
       - include: '#main'
 
+  # Escape sequences
+  escapes:
+    patterns:
+      - name: constant.character.escape.json
+        match: '(\\)["\\/bfnrt]'
+        captures:
+          '1': { name: punctuation.definition.escape.backslash.json }
+      - name: constant.character.escape.unicode.json
+        match: '(\\)u[0-9A-Fa-f]{4}'
+        captures:
+          '1': { name: punctuation.definition.escape.backslash.json }
+      - name: invalid.illegal.unrecognised-escape.json
+        match: '\\.'
+
   # Key:value pairs
   key:
     name: variable.other.object.key.json
-    match: '(")([^"]*)(")\s*(?=:)'
+    match: '(")((?:[^\\"]|\\.)*+)(")\s*(?=:)'
     captures:
       '1': { name: punctuation.definition.key.start.json }
+      '2': { patterns: [ include: '#escapes' ] }
       '3': { name: punctuation.definition.key.end.json }
 
   # String
   string:
     name: string.quoted.double.json
-    match: '(")([^"]*)(")\s*(?!:)'
+    match: '(")((?:[^\\"]|\\.)*+)(")\s*(?!:)'
     captures:
       '1': { name: punctuation.definition.string.begin.json }
+      '2': { patterns: [ include: '#escapes' ] }
       '3': { name: punctuation.definition.string.end.json }
 
   # Numbers
