@@ -1,0 +1,17 @@
+# NOTE: Made specifically for GitHub.com highlighting. May not work elsewhere.
+
+name: WhiteSpace Esolang
+scopeName: source.ws
+
+patterns:
+  # Spaces: blue
+  - name: markup.ignored.space.ws
+    match: ' '
+
+  # Tabs: red
+  - name: invalid.illegal.tab.ws
+    match: '\t'
+
+  # Newlines: pink, tagged '^M'
+  - name: carriage-return.ws
+    match: '\r'
