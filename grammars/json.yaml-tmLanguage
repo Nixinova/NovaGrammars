@@ -88,7 +88,7 @@ repository:
     match: '(?<=^|[,:\s\[])(true|false)(?=$|[,\s\]])'
 
   # Null
-  null:
+  'null':
     name: constant.language.null.json
     match: '(?<=^|[,:\s\[])null(?=$|[,\s\]])'
 
