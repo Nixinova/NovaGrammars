@@ -1,0 +1,76 @@
+name: Windows Message Text
+scopeName: source.win32-messages
+fileTypes:
+  - '.mc'
+
+patterns:
+  - include: '#main'
+
+repository:
+  main:
+    patterns:
+      - include: '#comment'
+      - include: '#insert'
+      - include: '#message'
+      - include: '#statement'
+
+  # Comment line
+  comment:
+    name: meta.comment.line.semicolon.win32-messages
+    begin: ';'
+    end: '$'
+    beginCaptures:
+      '0': { name: punctuation.definition.comment.win32-messages }
+    patterns:
+      - include: source.c
+
+  # Delimiters
+  delim:
+    name: meta.separator.win32-messages
+    match: '^\.$'
+
+  # Inserts
+  insert:
+    name: meta.line.insert.win32-messages
+    match: '(?x)
+      (%(?:.|\d{1,2}))
+      ((!)(\w+)(!))?
+      '
+    captures:
+      '1': { name: 'constant.language.insert.win32-messages' }
+      '2': { name: 'entity.name.tag.insert.format.win32-messages' }
+      '3': { name: 'punctuation.definition.insert.format.begin.win32-messages' }
+      '4': { name: 'punctuation.definition.insert.format.end.win32-messages' }
+
+  # Message contents
+  message:
+    name: string.unquoted.message.win32-messages
+    match: '^[^=]+$'
+
+  # Statements
+  statement:
+    patterns:
+      # Keyword
+      - name: keyword.control.statement.win32-messages
+        match: '[^=()]+(?=(=))'
+        captures:
+          '1': { name: punctuation.definition.statement.win32-messages }
+      # Numerical value
+      - name: constant.numeric.win32-messages
+        match: '(?:0\w)?\d+'
+      # String value
+      - name: string.unquoted.value.win32-messages
+        begin: '(?<==)(?!\()'
+        end: '$'
+        beginCaptures:
+          '0': { name: punctuation.definition.statement.win32-messages }
+      # Group value
+      - name: meta.block.statement.value.win32-messages
+        begin: '(?<==)\('
+        beginCaptures:
+          '0': { name: punctuation.definition.block.group.begin.win32-messages }
+        end: '\)'
+        endCaptures:
+          '0': { name: punctuation.definition.block.group.end.win32-messages }
+        patterns:
+          - include: '#statement'
