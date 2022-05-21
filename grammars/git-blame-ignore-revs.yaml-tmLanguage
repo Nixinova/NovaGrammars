@@ -1,5 +1,5 @@
 name: Git Blame Ignore Revs
-scopeName: text.git-blame-ignore
+scopeName: source.git-blame-ignore
 patterns:
 - include: '#main'
 
@@ -24,4 +24,4 @@ repository:
 
   invalid:
     name: invalid.illegal.git-blame-ignore
-    match: '.+'
+    match: '\S+'
