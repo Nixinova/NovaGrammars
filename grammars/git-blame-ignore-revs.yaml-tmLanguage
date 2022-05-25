@@ -24,4 +24,4 @@ repository:
 
   invalid:
     name: invalid.illegal.git-blame-ignore
-    match: '\S+'
+    match: '\S.*?(?=\s*$)'
