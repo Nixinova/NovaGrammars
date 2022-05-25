@@ -11,7 +11,7 @@ repository:
     - include: '#invalid'
 
   comment:
-    name: comment.line.git-revlist
+    name: comment.line.number-sign.git-revlist
     begin: '#'
     end: '$'
     beginCaptures:
