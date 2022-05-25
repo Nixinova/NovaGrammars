@@ -1,5 +1,5 @@
-name: Git Blame Ignore Revs
-scopeName: source.git-blame-ignore
+name: Git Revision List
+scopeName: source.git-revlist
 patterns:
 - include: '#main'
 
@@ -11,17 +11,17 @@ repository:
     - include: '#invalid'
 
   comment:
-    name: comment.line.git-blame-ignore
+    name: comment.line.git-revlist
     begin: '#'
     end: '$'
     beginCaptures:
       '0':
-        name: punctuation.definition.comment.git-blame-ignore
+        name: punctuation.definition.comment.git-revlist
 
   sha:
-    name: constant.numeric.sha.git-blame-ignore
+    name: constant.numeric.sha.git-revlist
     match: '[0-9a-fA-F]{40}(?=\s*$)'
 
   invalid:
-    name: invalid.illegal.git-blame-ignore
+    name: invalid.illegal.git-revlist
     match: '\S.*?(?=\s*$)'
