@@ -1,5 +1,8 @@
 name: Git Revision List
 scopeName: source.git-revlist
+fileTypes:
+-  git-blame-ignore-revs
+- .git-blame-ignore-revs
 patterns:
 - include: '#main'
 
