@@ -12,7 +12,7 @@ This repository contains various syntax highlighting/grammar files that I have c
 - **WhiteSpace**: [grammar](/grammars/whitespace.yaml-tmLanguage), [sample](/samples/whitespace.ws), [preview][whitespace-preview]
 - **Win32 Messages File**: [grammar](/grammars/win32-messages.yaml-tmLanguage), [sample](/samples/messages.mc), [preview][win32-preview]
 - **Generic Hash-Commented**: [grammar](/grammars/hash-commented.yaml-tmLanguage), [sample](/samples/.git-blame-ignore-revs), [preview][hash-commented-preview]
-- **Git Blame Ignore Revs**: [grammar](/grammars/git-blame-ignore-revs.yaml-tmLanguage), [sample](/samples/.git-blame-ignore-revs), [preview][blame-ignore-preview]
+- **Git Revision List**: [grammar](/grammars/git-revlist.yaml-tmLanguage), [sample](/samples/.git-blame-ignore-revs), [preview][blame-ignore-preview]
 
 ### External
 Grammars created by me that are found in other repositories.
@@ -29,6 +29,6 @@ Grammars created by me that are found in other repositories.
 [whitespace-preview]: https://nixinova.github.io/NovaLightshow/?grammar-type=url&grammar=https://raw.githubusercontent.com/Nixinova/NovaGrammars/main/grammars/whitespace.yaml-tmLanguage&sample-type=url&sample=https://raw.githubusercontent.com/Nixinova/NovaGrammars/main/samples/whitespace.ws
 [win32-preview]: https://nixinova.github.io/NovaLightshow/?grammar-type=url&grammar=https://raw.githubusercontent.com/Nixinova/NovaGrammars/main/grammars/win32-messages.yaml-tmLanguage&sample-type=url&sample=https://raw.githubusercontent.com/Nixinova/NovaGrammars/main/samples/messages.mc
 [hash-commented-preview]: https://nixinova.github.io/NovaLightshow/?grammar-type=url&grammar=https://raw.githubusercontent.com/Nixinova/NovaGrammars/main/grammars/hash-commented.yaml-tmLanguage&sample-type=url&sample=https://raw.githubusercontent.com/Nixinova/NovaGrammars/main/samples/.git-blame-ignore-revs
-[blame-ignore-preview]: https://nixinova.github.io/NovaLightshow/?grammar-type=url&grammar=https://raw.githubusercontent.com/Nixinova/NovaGrammars/main/grammars/git-blame-ignore-revs.yaml-tmLanguage&sample-type=url&sample=https://raw.githubusercontent.com/Nixinova/NovaGrammars/main/samples/.git-blame-ignore-revs
+[blame-ignore-preview]: https://nixinova.github.io/NovaLightshow/?grammar-type=url&grammar=https://raw.githubusercontent.com/Nixinova/NovaGrammars/main/grammars/git-revlist.yaml-tmLanguage&sample-type=url&sample=https://raw.githubusercontent.com/Nixinova/NovaGrammars/main/samples/.git-blame-ignore-revs
 [novasheets-preview]: https://nixinova.github.io/NovaLightshow/?grammar-type=url&grammar=https://github.com/NovaSheets/vscode/blob/main/grammars/novasheets.tmLanguage.yaml&sample-type=url&sample=https://raw.githubusercontent.com/Nixinova/NovaGrammars/main/samples/novasheets.nvss
 [astro-preview]: https://nixinova.github.io/NovaLightshow/?grammar-type=url&grammar=https://github.com/Nixinova/Astro-vscode/blob/main/grammars/astro.tmLanguage.yaml&sample-type=url&sample=https://raw.githubusercontent.com/Nixinova/NovaGrammars/main/samples/index.astro
