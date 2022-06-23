@@ -59,7 +59,7 @@ repository:
   # Key:value pairs
   key:
     name: entity.name.tag.key.json
-    match: '(")((?:[^\\"]|\\.)*+)(")\s*(?=:)'
+    match: '(")((?:[^\\"]|\\.)*+)(")(?=\s*:)'
     captures:
       '1': { name: punctuation.definition.key.start.json }
       '2': { patterns: [ include: '#escapes' ] }
@@ -68,7 +68,7 @@ repository:
   # String
   string:
     name: string.quoted.double.json
-    match: '(")((?:[^\\"]|\\.)*+)(")\s*(?!:)'
+    match: '(")((?:[^\\"]|\\.)*+)(")(?!\s*:)'
     captures:
       '1': { name: punctuation.definition.string.begin.json }
       '2': { patterns: [ include: '#escapes' ] }
