@@ -98,7 +98,7 @@ repository:
       - name: punctuation.separator.key-value.colon.json
         match: '(?<=")\s*:'
       - name: punctuation.separator.comma.json
-        match: ',\s*(?![}\]])'
+        match: ',(?!\s*[}\]])'
 
   # Other/invalid
   invalid:
