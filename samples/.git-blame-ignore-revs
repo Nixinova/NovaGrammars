@@ -1,6 +1,8 @@
 # 40-digit checksum (valid)
 1d92f4f73ed125bcd6912ae3ec804e405f4076a2
 
+1d92f4f73ed125bcd6912ae3ec804e405f4076a2 # trailing comment (valid)
+
 # 41-digit checksum (invalid)
 1d92f4f73ed125bcd6912ae3ec804e405f4076a20
 
