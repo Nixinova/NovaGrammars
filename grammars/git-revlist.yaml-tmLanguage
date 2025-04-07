@@ -23,8 +23,8 @@ repository:
 
   sha:
     name: constant.numeric.sha.git-revlist
-    match: '(?<=^\s*)[0-9a-fA-F]{40}(?=\s*(#.*)?$)'
+    match: '\b[0-9a-fA-F]{40}\b'
 
   invalid:
     name: invalid.illegal.git-revlist
-    match: '\S.*?(?=\s*$)'
+    match: '\S.*?'
