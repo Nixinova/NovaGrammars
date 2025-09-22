@@ -1,0 +1,44 @@
+name: Git Commit
+scopeName: text.git-commit
+fileTypes:
+  - COMMIT_EDITMSG
+  - MERGE_MSG
+
+patterns:
+- include: '#main'
+
+repository:
+  main:
+    patterns:
+    - include: '#comment'
+
+  comment:
+    name: comment.line.git-commit
+    begin: '^#'
+    end: '$'
+    beginCaptures:
+      '0':
+        name: punctuation.definition.comment.git-commit
+    patterns:
+    - name: meta.generic.variable.other.modified.git-commit
+      match: '(modified)(:) +(.+)'
+      captures:
+        '1': { name: markup.changed.git-commit }
+        '3': { name: markup.bold.filename.git-commit }
+    - name: meta.generic.variable.other.renamed.git-commit
+      match: '(renamed)(:) +(.+)(->)(.+)'
+      captures:
+        '1': { name: markup.changed.git-commit }
+        '3': { name: markup.bold.filename.git-commit }
+        '4': { name: markup.raw.token.git-commit }
+        '5': { name: markup.bold.filename.git-commit }
+    - name: meta.generic.variable.other.deleted.git-commit
+      match: '(deleted)(:) +(.+)'
+      captures:
+        '1': { name: markup.deleted.git-commit }
+        '3': { name: markup.bold.filename.git-commit }
+    - name: meta.generic.variable.other.new-file.git-commit
+      match: '(new file)(:) +(.+)'
+      captures:
+        '1': { name: markup.inserted.git-commit }
+        '3': { name: markup.bold.filename.git-commit }

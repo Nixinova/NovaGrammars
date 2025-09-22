@@ -13,6 +13,7 @@ This repository contains various syntax highlighting/grammar files that I have c
 - **Win32 Messages File**: [grammar](/grammars/win32-messages.yaml-tmLanguage), [sample](/samples/messages.mc), [preview][win32-preview]
 - **Generic Hash-Commented**: [grammar](/grammars/hash-commented.yaml-tmLanguage), [sample](/samples/.git-blame-ignore-revs), [preview][hash-commented-preview]
 - **Git Revision List**: [grammar](/grammars/git-revlist.yaml-tmLanguage), [sample](/samples/.git-blame-ignore-revs), [preview][blame-ignore-preview]
+- **Git Commit**: [grammar](/grammars/git-commit.yaml-tmLanguage), [sample](/samples/COMMIT_EDITMSG), [preview][git-commit-preview]
 
 ### External
 Grammars created by me that are found in other repositories.
@@ -32,3 +33,4 @@ Grammars created by me that are found in other repositories.
 [blame-ignore-preview]: https://nixinova.github.io/NovaLightshow/?grammar-type=url&grammar=https://raw.githubusercontent.com/Nixinova/NovaGrammars/main/grammars/git-revlist.yaml-tmLanguage&sample-type=url&sample=https://raw.githubusercontent.com/Nixinova/NovaGrammars/main/samples/.git-blame-ignore-revs
 [novasheets-preview]: https://nixinova.github.io/NovaLightshow/?grammar-type=url&grammar=https://github.com/NovaSheets/vscode/blob/main/grammars/novasheets.tmLanguage.yaml&sample-type=url&sample=https://raw.githubusercontent.com/Nixinova/NovaGrammars/main/samples/novasheets.nvss
 [astro-preview]: https://nixinova.github.io/NovaLightshow/?grammar-type=url&grammar=https://github.com/Nixinova/Astro-vscode/blob/main/grammars/astro.tmLanguage.yaml&sample-type=url&sample=https://raw.githubusercontent.com/Nixinova/NovaGrammars/main/samples/index.astro
+[git-commit-preview]: https://nixinova.github.io/NovaLightshow/?grammar-type=url&grammar=https://raw.githubusercontent.com/Nixinova/NovaGrammars/main/grammars/git-commit.yaml-tmLanguage&sample-type=url&sample=https://raw.githubusercontent.com/Nixinova/NovaGrammars/main/samples/COMMIT_EDITMSG
